@@ -1,59 +1,75 @@
-# Nuxt Portfolio Template
 
-[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com/pro)
-[![Deploy to NuxtHub](https://img.shields.io/badge/Deploy%20to-NuxtHub-00DC82?logo=nuxt&labelColor=020420)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/portfolio)
+# ResuMe Nuxt + i18n (Multilanguage) ✨🌍
 
-Use this template to create your own portfolio with [Nuxt UI Pro](https://ui.nuxt.com/pro).
+![locates](./documentation/ResumeLogo.png)
 
-- [Live demo](https://portfolio-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/getting-started/installation/pro/nuxt)
+An easy way to **build** you own personal web resume! 💪
+### [Check the Demo 💾](https://ivangreve.com/)
 
-<a href="https://portfolio-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=light">
-    <img alt="Nuxt Portfolio Template" src="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg">
-  </picture>
-</a>
+## Pre-Requisites 
 
-## Quick Start
+- Install [NodeJS](https://nodejs.org/es/)
 
-```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-pro/portfolio
+
+##  How to start? 🥳
+1) **Clone** the **repository**
+2) **Install** dependencies:
+  - `$ npm install`
+3) **Build** application:
+  - `$ npm run build`
+4) **Run** in **dev mode**:
+  - `$ npm run dev`
+
+
+## Configuration ⚙
+
+***You can easily customize the template and the languages!*** 🚀
+- To do this, you have to **edit** the **locales** files as you want! 📄
+
+![locates](./documentation/localefiles.jpg)
+
+### Languages Files 🌍
+**English**: `./locales/en.json`
+
+**Spanish** `./locales/es.json`
+
+### Add new Language
+1) **Create** a new language file in the folder `./locales` :
+- **eg.** : `fr.json`
+2) **Change** **i18n** configuration in the ***nuxt.config.js***, 
+```javascript
+i18n: {
+	locales: ['en', 'es', 'fr'],
+	defaultLocale:  'en',
+	vueI18n: {
+		fallbackLocale:  'en',
+		messages: {
+			en:  require('./locales/en.json'),
+			es:  require('./locales/es.json'),
+			fr:  require('./locales/fr.json')
+		}
+	}
+},
+```
+3) You can easily change the actual language by following way:
+```html
+<div>
+	<nuxt-link class="btn btn-light" :to="switchLocalePath('en')">EN</nuxt-link>
+	<nuxt-link class="btn btn-light" :to="switchLocalePath('es')">ES</nuxt-link>
+	<nuxt-link class="btn btn-light" :to="switchLocalePath('fr')">FR</nuxt-link>
+</div>
 ```
 
-## Setup
+##  Generate static code 🥳
+1) In the **root** folder, run the following command:
+- `$ npm run generate`
+2) All the **generated** code will be apear in the `./dist` folder.
 
-Make sure to install the dependencies:
 
-```bash
-pnpm install
-```
+## Used Technologies/Tools 🔧🦾
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-pnpm dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-pnpm build
-```
-
-Locally preview production build:
-
-```bash
-pnpm preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-## Renovate integration
-
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+- [VueJs](https://vuejs.org/)
+- [Nuxt](https://nuxtjs.org/)
+- [i18n](https://nuxtjs.org/examples/i18n/)
+- [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
+- [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
