@@ -1,6 +1,6 @@
 {
   "name": "ivan-resume",
-  "packageManager":"pnpm@10.13.1"
+  "packageManager":"pnpm@10.13.1",
   "version": "1.0.0",
   "private": true,
   "scripts": {
