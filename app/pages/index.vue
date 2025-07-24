@@ -9,6 +9,9 @@ if (!page.value) {
     fatal: true
   })
 }
+//<LandingBlog :page />
+//<LandingTestimonials :page />
+//<LandingFAQ :page />
 
 useSeoMeta({
   title: page.value?.seo.title || page.value?.title,
@@ -28,9 +31,6 @@ useSeoMeta({
     >
       <LandingAbout :page />
       <LandingWorkExperience :page />
-    </UPageSection>
-    <LandingBlog :page />
-    <LandingTestimonials :page />
-    <LandingFAQ :page />
+    </UPageSection>  
   </UPage>
 </template>

@@ -4,11 +4,11 @@ type Event = {
   date: string
   location: string
   url?: string
-  category: 'Conference' | 'Live talk' | 'Podcast'
+  category: 'Conference' //| 'Live talk' | 'Podcast'
 }
 
-const { data: page } = await useAsyncData('speaking', () => {
-  return queryCollection('speaking').first()
+const { data: page } = await useAsyncData('publications', () => {
+  return queryCollection('publications').first()
 })
 if (!page.value) {
   throw createError({

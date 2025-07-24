@@ -5,19 +5,23 @@ export const navLinks: NavigationMenuItem[] = [{
   icon: 'i-lucide-home',
   to: '/'
 }, {
-  label: 'Projects',
+  label: 'Thesis',
   icon: 'i-lucide-folder',
   to: '/projects'
 }, {
-  label: 'Blog',
-  icon: 'i-lucide-file-text',
-  to: '/blog'
-}, {
-  label: 'Speaking',
+  label: 'Publications',
   icon: 'i-lucide-mic',
-  to: '/speaking'
+  to: '/publications'
 }, {
   label: 'About',
   icon: 'i-lucide-user',
   to: '/about'
 }]
+
+/*
+{
+  label: 'Blog',
+  icon: 'i-lucide-file-text',
+  to: '/blog'
+}, 
+*/

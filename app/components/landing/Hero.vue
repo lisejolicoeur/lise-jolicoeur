@@ -106,6 +106,8 @@ defineProps<{
           class="flex items-center gap-2"
         >
           <UButton v-bind="page.hero.links[0]" />
+          <UButton v-bind="page.hero.links[1]" />
+          <!--
           <UButton
             :color="global.available ? 'success' : 'error'"
             variant="ghost"
@@ -126,6 +128,7 @@ defineProps<{
               </span>
             </template>
           </UButton>
+          -->
         </div>
       </Motion>
 
@@ -155,7 +158,9 @@ defineProps<{
         </Motion>
       </div>
     </template>
-
+  </UPageHero>
+</template>
+<!-- 
     <UPageMarquee
       pause-on-hover
       class="py-2 -mx-4 sm:-mx-6 lg:-mx-8 [--duration:40s]"
@@ -187,5 +192,4 @@ defineProps<{
         >
       </Motion>
     </UPageMarquee>
-  </UPageHero>
-</template>
+-->
